@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--===== Naquadria ====-->
+	<RecipeDef>
+		<defName>Make_Naquadria</defName>
+		<label>Make Naquadria</label>
+		<description>Make a batch of Naquadria from Naquadah.</description>
+		<jobString>Makeing Naquadria.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>GoauldCraftingTable</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Naquadah</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Naquadah</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Naquadria>5</Naquadria>
+		</products>
+	</RecipeDef>
+
+	<!--===== Biomass from cooconed meat ====-->
+	<RecipeDef>
+		<defName>Make_Biomass_from_CocoonedHumanMeat</defName>
+		<label>make Biomass from cocooned Human Meat</label>
+		<description>Make a batch of biomass.</description>
+		<jobString>Make_Biomass.</jobString>
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<workAmount>450</workAmount>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>WraithCraftingTable</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CocoonedHumanMeat</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CocoonedHumanMeat</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Biomass>20</Biomass>
+		</products>
+	</RecipeDef>
+
+	<!--===== Biomass from meat ====-->
+
+
+	<RecipeDef Name="CookBiomassBase" Abstract="True">
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<specialFiltersToDisallow>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<disallowedCategories>
+				<li>EggsFertilized</li>
+			</disallowedCategories>
+			<disallowedThingDefs>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef ParentName="CookBiomassBase">
+		<defName>Make_Biomass_from_Meat</defName>
+		<label>make biomass from meat</label>
+		<description>Make a batch of biomass from meat.</description>
+		<jobString>Make_Biomass.</jobString>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<workAmount>450</workAmount>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<recipeUsers>
+			<li>WraithCraftingTable</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<Biomass>20</Biomass>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+
+
+</Defs>

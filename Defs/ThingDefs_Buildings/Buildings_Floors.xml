@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef Name="FloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <designationCategory>Floors</designationCategory>
+    <fertility>0</fertility>
+    <constructEffect>ConstructDirt</constructEffect>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </TerrainDef>
+
+  <!-- ================= Wraith ================= -->
+
+
+
+	<TerrainDef  ParentName="FloorBase">
+		<defName>Hive_Floor</defName>
+		<label>Hive floor</label>
+		<renderPrecedence>250</renderPrecedence>
+		<description>Hive floor.</description>
+		<texturePath>Building/Hive_Floor</texturePath>
+				<color>(108,78,55)</color>
+		<statBases>
+			<WorkToBuild>85</WorkToBuild>
+			<Beauty>3</Beauty>
+    </statBases>
+		<costList>
+			<Biomass>2</Biomass>
+		</costList>
+		<constructEffect>ConstructWood</constructEffect>
+		<designationHotKey>Misc7</designationHotKey>
+    <researchPrerequisites><li>Wraith_Basic</li></researchPrerequisites>
+	</TerrainDef>
+
+  
+</Defs>
+

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>Goauld_Technology</defName>
+		<label>Goauld</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef Name="Goauld_Research" Abstract="True">
+		<techLevel>Industrial</techLevel>
+		<tab>Goauld_Technology</tab>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding><!--HiTechResearchBench-->
+	</ResearchProjectDef>
+
+  <!--======== Column 1 - Armor =========-->
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Goauld_Armor_Tier1</defName>
+		<label>Jaffa Armor</label>
+		<description>Research the basic Armor for the Jaffa troops.</description>
+		<baseCost>500</baseCost>
+		<prerequisites>
+			<li>Machining</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Goauld_Armor_Tier2</defName>
+		<label>specialised helmets</label>		
+		<description>Research spezialiesed Helmets for your troops.</description>
+		<baseCost>500</baseCost>		
+		<prerequisites>
+			<li>Goauld_Armor_Tier1</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Goauld_Armor_Tier3</defName>
+		<label>Kull armor</label>		
+		<description>Research the Kull Armor.</description>
+		<baseCost>1500</baseCost>		
+		<prerequisites>
+			<li>Goauld_Armor_Tier2</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+  <!--======== Column 2 - Weapon =========-->
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Goauld_Weapon_Tier1</defName>
+		<label>Jaffa Weapons</label>
+		<description>Research the basic weapon for the Jaffa troops.</description>
+		<baseCost>500</baseCost>
+		<prerequisites>
+			<li>Gunsmithing</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Goauld_Weapon_Tier2</defName>
+		<label>Kull Weapons</label>
+		<description>Research the basic weapon for the Kull troops.</description>
+		<baseCost>1500</baseCost>
+		<prerequisites>
+			<li>Goauld_Weapon_Tier1</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+
+  <!--======== Column 2 - Buildings =========-->
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Goauld_Basic</defName>
+		<label>Basic Goa'uld Technology</label>
+		<description>Get access to the basic Goa'uld technology.</description>
+		<baseCost>1500</baseCost>			
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>		
+		<researchViewX>0</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Tel-tak</defName>
+		<label>Tel'tak</label>
+		<description>Get access to the Tel'tak transport ship.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>		
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>	
+
+<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Naquadria_Fired_Generator</defName>
+		<label>Naquadria Generator</label>
+		<description>Get access to the naquadria fired generator.</description>
+		<baseCost>1500</baseCost>			
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>		
+		<researchViewX>2</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>	
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Sarcophagus</defName>
+		<label>Sarcophagus</label>
+		<description>Get access to the Goauld sarcophagus.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Cryptosleep</li>
+			<li>HospitalBed</li>
+		</prerequisites>		
+		<researchViewX>3</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>	
+
+
+</Defs>

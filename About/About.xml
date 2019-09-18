@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Stargate Races</name>
+	<supportedVersions>
+		<li>1.0</li>
+	</supportedVersions>
+	<author>Fenris</author>
+	<description>This mod adds the Race of the Wraith and the Goa'uld from the Series Stargate. This mod was heavily inspired on the RimGate - Jaffa, Kree! mod and is increasing now. This one adds the Jaffa with their Armor, the Staff weapon and the Stungun but it wasn't possilbe to build them yourself. Therefore I have rewritten the Mod and add some other stuff myself, as well as I retexutred and rewrote some very interesting mods to add more flavour.
+It is work in progress as it is super time consuming as it is my first mod and I should focus a bit more oin my PhD thesis - Feel free to join and help me, especially if you know C# modding ( I have no clue, I tried and it is more difficult for me)
+
+The mod contains (v1.1):
+Two new Race inculding the suitable scenario:
+Goa'uld:
+- The one Race is called Goa'uld, in order to choose if your pawns are Goa'uld, Jaffa or slaves you need to choose their Backstories. I recommend to play with 1 Goa'uld, 2 Jaffa and 3 Slaves.
+Armor and Weapons
+- Jaffa Armor with Helmets, Ma'tok (STaff Weapon) and Zat (StunGun)(all orginally from RimGate - Jaffa, Kree! by Xen, Charnov, Helixien, Cpt. Ohu and Erdelf)
+- golden Goa'uld Armor and Helemts
+- Kull Armor and weapon
+- Tacluchnatagamuntoron (grenade)
+- Tel'tak transport ship, which brings you where every you want and back (orginially it was Cargo Pod Transport by AKreedz)
+- Mineable Naqadah which can be refined to Naqadriah at the Electric Smelter (inspired by Coal from Agrarcore) 
+- Naqadriah Power Generator
+- The sarcophagus (inspired by Fast regen by Daniledman)
+- the necessary research table
+
+Wraith:
+- They are carnivore and need a lot of meat. Build a cocoon as fast as possible. (inspired from MeatLab-Mod)
+- Meat can be transfered to Biomass at the butcher table
+- Biomass is a necessary ressource
+- They have their own meat based power source
+- They have a stun gun (which unfortuenaltey is ugly) and their own grandes (for killing people)
+- Hair is from Lord of the Rim-Eleven mod as well as vanilla game
+- Icon is from https://www.kisspng.com/png-teyla-emmagan-wraith-stargate-symbol-royal-seal-3377928/download-png.html
+- Due to my lack of C# modding I cannot give them a working Shuttle, somehow the assemblies is just allowed one kind of shuttle
+
+I want to add a StarGate which would count as Wincondition, but I simple don't know how^^
+
+If you want to use this mod as basis for your own versions of any other stargate race (replicants, ancient, wraith) or as basis for a mediveal king, knight and slave scenario feel free to use it. Remember to mention all other autohors. 
+
+I recommend to play it with one of the many Shield mods to enable more sci-fi feeling (e.g. ED-ShieldsBasic)
+
+P.s. I couldn't fix that the pawn in the sarcophagus doesn't show its stupid head. I would be happy for a fix. 
+
+v.1.1
+Due to some problems I have created a Goa'uld and a Wraith Crafting Table where their stuff can be crafted. So no data are overrided of the original files. THis should help to work with different mods too. Unfortunetla I couldn't fix any head issues as the files are all properly labelled. It should work, but I am not a good coder nor artist (as you might realise^^).
+
+</description>
+</ModMetaData>

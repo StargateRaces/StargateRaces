@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--Class="CulturedMeat.MeatPlant"-->
+	
+  <ThingDef Name="CMeatBase" Abstract="True" >
+    <category>Plant</category>
+    <thingClass>CulturedMeat.MeatPlant</thingClass>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <tickerType>Long</tickerType>
+    <selectable>False</selectable>
+    <neverMultiSelect>True</neverMultiSelect>
+    <drawerType>MapMeshOnly</drawerType>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>CutoutPlant</shaderType>
+    </graphicData>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>RawBad</preferability>
+	</ingestible>
+    <plant>
+			<growMinGlow>0</growMinGlow>
+			<growOptimalGlow>0</growOptimalGlow>
+			<fertilityMin>0.5</fertilityMin>
+			<fertilitySensitivity>1.0</fertilitySensitivity>
+			<sowTags>
+				<li>MeatLab_tag</li>
+			</sowTags>
+		<soundHarvesting>Harvest_Standard</soundHarvesting>
+		<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+		<harvestWork>190</harvestWork>
+		<sowWork>260</sowWork>
+		<topWindExposure>0</topWindExposure>
+		<visualSizeRange>
+			<min>0.3</min>
+			<max>0.8</max>
+		</visualSizeRange>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+
+  <!--=========================== Food crops ==============================-->
+
+
+	<ThingDef ParentName="CMeatBase">
+		<defName>CMeatHuman</defName>
+		<label>Cocooned Human Meat</label>
+		<description>Human meat. Long growth speed and high nutrition value.</description>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Nutrition>0.20</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Item/Meat/CMeatHuman_Growing</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<ingestible />
+		<plant>
+			<fertilitySensitivity>1.0</fertilitySensitivity>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>CocoonedHumanMeat</harvestedThingDef>
+			<harvestYield>28</harvestYield>
+			<growDays>2</growDays>
+		</plant>
+	</ThingDef>
+
+</Defs>

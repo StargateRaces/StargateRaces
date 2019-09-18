@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="WraithFactionBase">
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="WraithFactionBase">
+    <defName>WraithPlayerColony</defName>
+    <label>Wraith Colony</label>
+    <description>Your own community.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Wraith</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+			<li>Wraith_Child_Backstory</li>
+			<li>Wraith_Queen_Backstory</li>
+			<li>Wraith_Commander_Backstory</li>
+			<li>Wraith_Warrior_Backstory</li>
+  	</backstoryCategories>
+    <homeIconPath>World/WraithBaseIcon</homeIconPath>
+    <expandingIconTexture>World/WraithBaseIcon</expandingIconTexture>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+      <li>Punk</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+
+  </FactionDef>
+  
+    <FactionDef Parent="WraithFactionBase">
+    <defName>WraithPlayerColonyTribal</defName>
+    <label>Wraith Tribal</label>
+    <description>Wraith Tribal Start.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Wraith</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+			<li>Wraith_Child_Backstory</li>
+			<li>Wraith_Queen_Backstory</li>
+			<li>Wraith_Commander_Backstory</li>
+			<li>Wraith_Warrior_Backstory</li>
+  	</backstoryCategories>
+    <homeIconPath>World/WraithBaseIcon</homeIconPath>
+    <expandingIconTexture>World/WraithBaseIcon</expandingIconTexture>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+      <li>Punk</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(0, 0.437, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+
+</Defs>

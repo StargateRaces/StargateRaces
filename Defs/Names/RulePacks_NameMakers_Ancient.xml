@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerPersonAncientM</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[AncientfirstM] [Ancientlast]</li>
+        <li>name->[badasstwi] [AncientfirstM]</li>
+        <li>name->[AncientfirstM] '[badasstwi]' [Ancientlast]</li>
+        <li>name->[AncientfirstM] [badasstwi]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>AncientfirstM</keyword>
+          <path>Ancient_Names/AncientM</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Ancientlast</keyword>
+          <path>Ancient_Names/Ancientlast</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>badasstwi</keyword>
+          <path>Ancient_Names/Concepts_Ancient</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonAncientF</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[AncientfirstF] [Ancientlast]</li>
+        <li>name->[badasstwi] [AncientfirstF]</li>
+        <li>name->[AncientfirstF] '[badasstwi]' [Ancientlast]</li>
+        <li>name->[AncientfirstF] [badasstwi]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>AncientfirstF</keyword>
+          <path>Ancient_Names/AncientF</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Ancientlast</keyword>
+          <path>Ancient_Names/Ancientlast</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>badasstwi</keyword>
+          <path>Ancient_Names/Concepts_Ancient</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

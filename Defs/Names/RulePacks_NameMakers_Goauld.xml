@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerPersonGoauldM</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[GoauldfirstM] [Goauldlast]</li>
+        <li>name->[badasstwi] [GoauldfirstM]</li>
+        <li>name->[GoauldfirstM] '[badasstwi]' [Goauldlast]</li>
+        <li>name->[GoauldfirstM] [badasstwi]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>GoauldfirstM</keyword>
+          <path>Goauld_Names/GoauldM</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Goauldlast</keyword>
+          <path>Goauld_Names/Goauldlast</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>badasstwi</keyword>
+          <path>Goauld_Names/Concepts_Goauld</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonGoauldF</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[GoauldfirstF] [Goauldlast]</li>
+        <li>name->[badasstwi] [GoauldfirstF]</li>
+        <li>name->[GoauldfirstF] '[badasstwi]' [Goauldlast]</li>
+        <li>name->[GoauldfirstF] [badasstwi]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>GoauldfirstF</keyword>
+          <path>Goauld_Names/GoauldF</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Goauldlast</keyword>
+          <path>Goauld_Names/Goauldlast</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>badasstwi</keyword>
+          <path>Goauld_Names/Concepts_Goauld</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

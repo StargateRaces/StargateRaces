@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+  <SoundDef>
+    <defName>Staff_Fire</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipPath>Weapon/JaffaStaff_Fire</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.936413</min>
+          <max>1.042391</max>
+        </pitchRange>
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />
+            <outParam Class="SoundParamTarget_PropertyLowPass">
+              <filterProperty>Cutoff</filterProperty>
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>17.08957</x>
+                    <y>21001.8</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>24.77761</x>
+                    <y>12701.95</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>32.786</x>
+                    <y>7168.717</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>45.91975</x>
+                    <y>4270.358</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>66.10088</x>
+                    <y>2557.69</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+        </paramMappings>
+        <filters>
+          <li Class="SoundFilterLowPass">
+            <cutoffFrequency>10000</cutoffFrequency>
+            <lowpassResonaceQ>1</lowpassResonaceQ>
+          </li>
+        </filters>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Kull_Fire</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipPath>Weapon/KullGun_Fire</clipPath>
+          </li>
+        </grains>
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />
+            <outParam Class="SoundParamTarget_PropertyLowPass">
+              <filterProperty>Cutoff</filterProperty>
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>17.08957</x>
+                    <y>21001.8</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>24.77761</x>
+                    <y>12701.95</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>32.786</x>
+                    <y>7168.717</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>45.91975</x>
+                    <y>4270.358</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>66.10088</x>
+                    <y>2557.69</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+        </paramMappings>
+        <filters>
+          <li Class="SoundFilterLowPass">
+            <cutoffFrequency>10000</cutoffFrequency>
+            <lowpassResonaceQ>1</lowpassResonaceQ>
+          </li>
+        </filters>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ZatGun_Fire</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/ZatGun_Fire</clipFolderPath>
+          </li>
+        </grains>
+
+        <sustainRelease>1</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_Zat</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/ZatGun_Interact</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

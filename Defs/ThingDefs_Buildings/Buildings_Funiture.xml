@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!--============================== Beds ==============================-->
+    <ThingDef ParentName="BedWithQualityBase">
+    <defName>Goauld_Sarcophagus</defName>
+    <label>Goa'uld Sarcophagus</label>
+    <description>Based on Ancient technology, the sarcophagus heals the human host body very efficiently.</description>
+    <thingClass>Building_Bed</thingClass>
+    <graphicData>
+      <texPath>Building/Goauld_Sarcophagus</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <color>(0.01, 0.01, 0.01)</color>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+	  <damageData>
+				<rect>(0,0.04,1,1.89)</rect>
+	  </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>380</MaxHitPoints>
+      <WorkToBuild>8500</WorkToBuild>
+      <Mass>75</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>0.95</BedRestEffectiveness>
+      <Comfort>0.95</Comfort>
+      <ImmunityGainSpeedFactor>1.5</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.25</MedicalTendQualityOffset>
+	  <SurgerySuccessChanceFactor>1.25</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(1,2)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>350</costStuffCount>
+    <costList>
+      <MedicineUltratech>5</MedicineUltratech>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+	<building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>90</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+ <fillPercent>0.4</fillPercent>
+    <pathCost>60</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <researchPrerequisites><li>Sarcophagus</li></researchPrerequisites>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <techLevel>Medieval</techLevel>
+  </ThingDef>
+  
+</Defs>

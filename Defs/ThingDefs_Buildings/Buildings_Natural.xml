@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--================================ naquadah Ore ======================================-->
+	
+  <ThingDef ParentName="RockBase">
+    <defName>Mineablenaquadah</defName>
+    <label>Naquadah ore</label>
+    <description>Rock containing chunks of raw Naquadah.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(114,114,114)</color>
+      <colorTwo>(30,30,30)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>4000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>Naquadah</mineableThing>
+      <mineableYield>40</mineableYield>
+      <mineableScatterCommonality>0.9</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>12</min>
+        <max>24</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+</Defs> 

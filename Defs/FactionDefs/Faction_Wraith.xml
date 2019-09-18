@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef>
+    <defName>WraithEmpire</defName>
+    <label>Wraith colony</label>
+    <description>A colony of the mysterious Wraith race.</description>
+    <pawnsPlural>Wraith</pawnsPlural>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <settlementGenerationWeight>0.25</settlementGenerationWeight>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Queen</leaderTitle>
+    <startingGoodwill>
+      <min>-60</min>
+      <max>0</max>
+    </startingGoodwill>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>Wraith_Child_Backstory</li>
+      <li>Wraith_Queen_Backstory</li>
+      <li>Wraith_Commander_Backstory</li>
+      <li>Wraith_Warrior_Backstory</li>
+    </backstoryCategories>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+      <li>Punk</li>
+    </hairTags>
+    <naturalColonyGoodwill>
+      <min>-60</min>
+      <max>0</max>
+    </naturalColonyGoodwill>
+    <visitorTraderKinds>
+      <li>Visitor_Wraith_Standard</li>
+    </visitorTraderKinds>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+    </caravanTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-50</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <Wraith_Soldier>130</Wraith_Soldier>
+          <Wraith_Commander>150</Wraith_Commander>
+          <Wraith_Queen>170</Wraith_Queen>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Colonist>50</Colonist>
+          <GrandVizier>250</GrandVizier>
+          <Wraith_Soldier>100</Wraith_Soldier>
+          <Wraith_Soldier>130</Wraith_Soldier>
+          <Wraith_Commander>130</Wraith_Commander>
+          <Wraith_Queen>170</Wraith_Queen>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Trader>1</Trader>
+        </traders>
+        <carriers>
+          <Muffalo>2</Muffalo>
+          <Dromedary>2</Dromedary>
+        </carriers>
+        <guards>
+          <Wraith_Soldier>100</Wraith_Soldier>
+          <Wraith_Soldier>130</Wraith_Soldier>
+          <Wraith_Commander>130</Wraith_Commander>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Colonist>50</Colonist>
+          <GrandVizier>250</GrandVizier>
+          <Wraith_Soldier>100</Wraith_Soldier>
+          <Wraith_Soldier>130</Wraith_Soldier>
+          <Wraith_Commander>130</Wraith_Commander>
+          <Wraith_Queen>170</Wraith_Queen>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WraithBaseIcon</homeIconPath>
+    <expandingIconTexture>World/WraithBaseIcon</expandingIconTexture>
+  </FactionDef>
+
+</Defs>

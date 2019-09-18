@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="BaseGrenadeProjectile" Abstract="True">
+		<category>Projectile</category>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>projectile</label>
+		<tickerType>Normal</tickerType>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>12</speed>
+			<flyOverhead>false</flyOverhead>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="BaseGoauldGrenade" ParentName="BaseMakeableGrenade" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>GoauldCraftingTable</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+			<researchPrerequisite>Goauld_Weapon_Tier1</researchPrerequisite>
+		</recipeMaker>
+		<weaponTags>
+			<li>JaffaGrenade</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- ======= Tok'kal Stun Grenade ======= -->
+
+	<ThingDef Name="Grenade_TokKal" ParentName="BaseGoauldGrenade">
+		<defName>TokKal</defName>
+		<label>Tok'Kal</label>
+		<description>A stun grenade used by Jaffa warriors.</description>
+		<tickerType>Normal</tickerType>
+		<costList>
+			<Steel>20</Steel>
+			<Chemfuel>80</Chemfuel>
+			<Naquadah>2</Naquadah>
+		</costList>
+		<graphicData>
+			<texPath>Weapons/tokkal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<verbs>
+			<li>
+				<label>Throw Tok'Kal grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Proj_TokKal</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Proj_TokKal</defName>
+		<label>Tok'Kal</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Weapons/Projectile/tokkal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius >1.9</explosionRadius>
+			<!--<damageDef>EMP</damageDef> Disable this for now, til I figure out how to have both effects -->
+			<damageDef>Stun</damageDef>
+			<!-- Use default damage from explosion def -->
+			<explosionDelay>100</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+	<!-- Wraith Grenades -->
+
+	<ThingDef Name="BaseWraithGrenade" ParentName="BaseMakeableGrenade" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>WraithCraftingTable</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+			<researchPrerequisite>Wraith_Weapon_Tier1</researchPrerequisite>
+		</recipeMaker>
+		<weaponTags>
+			<li>WraithGun</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- ======= Wraith Grenade ======= -->
+
+	<ThingDef Name="Grenade_Wraith" ParentName="BaseWraithGrenade">
+		<defName>Wraith_Grenade</defName>
+		<label>Wraith Grenade</label>
+		<description>A grenade used by the wraith warriors.</description>
+		<tickerType>Normal</tickerType>
+		<costList>
+			<Steel>20</Steel>
+			<Chemfuel>80</Chemfuel>
+		</costList>
+		<graphicData>
+			<texPath>Weapons/Wraith_Grenade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<verbs>
+			<li>
+				<label>throw grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Proj_Wraith_grenade</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Proj_Wraith_grenade</defName>
+		<label>Wraith Grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Weapons/Projectile/bullet_Wraith_Grenade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius >1.9</explosionRadius >
+			<damageDef>Bomb</damageDef>
+			<!-- Use default damage from explosion def -->
+			<explosionDelay>100</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseWraithPawnKind">
+    <race>Alien_Wraith</race>
+    <combatPower>40</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseWraithPawnKind">
+    <defName>Wraith</defName>
+    <label>colonist</label>
+    <defaultFactionType>WraithPlayerColony</defaultFactionType>
+    <backstoryCategories>
+			<li>Wraith_Child_Backstory</li>
+			<li>Wraith_Queen_Backstory</li>
+			<li>Wraith_Commander_Backstory</li>
+			<li>Wraith_Warrior_Backstory</li>
+  	</backstoryCategories>
+    <apparelTags>
+      <li>Spacer</li>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+	<minGenerationAge>21</minGenerationAge>
+	<maxGenerationAge>100</maxGenerationAge>
+  </PawnKindDef>
+
+</Defs>

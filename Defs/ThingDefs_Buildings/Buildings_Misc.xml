@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--==== Tel'tak============-->
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Building_Helicopter</defName>
+    <label>Tel'tak</label>
+    <description>Tel'taks are small transport ships capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+    <graphicData>
+      <texPath>Tel'tak/Tel'tak</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(9,9)</drawSize>
+    </graphicData>
+    <size>(4,5)</size>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <statBases>
+      <MaxHitPoints>850</MaxHitPoints>
+      <WorkToBuild>1600</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Mass>114514</Mass>
+    </statBases>
+    <costList>
+      <Plasteel>100</Plasteel>
+      <Steel>100</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <Naquadah>100</Naquadah>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>3000</massCapacity>
+      </li>
+      <li Class="Helicopter.CompProperties_LaunchableHelicopter" />
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>350.0</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_TransporterContents</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Tel-tak</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiIconScale>0.65</uiIconScale>
+  </ThingDef>
+
+
+</Defs>

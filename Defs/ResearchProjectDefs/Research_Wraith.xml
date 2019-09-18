@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>Wraith_Technology</defName>
+		<label>Wraith</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef Name="Wraith_Research" Abstract="True">
+		<techLevel>Industrial</techLevel>
+		<tab>Wraith_Technology</tab>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>		<!--HiTechResearchBench-->
+	</ResearchProjectDef>
+
+	<!--======== Column 1 - Armor =========-->
+
+	<ResearchProjectDef ParentName="Wraith_Research">
+		<defName>Wraith_Armor_Tier1</defName>
+		<label>Wraith Armor</label>
+		<description>Research the basic Armor for the Wraith troops.</description>
+		<baseCost>500</baseCost>
+		<prerequisites>
+			<li>Machining</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="Wraith_Research">
+		<defName>Wraith_Armor_Tier2</defName>
+		<label>specialised helmets</label>
+		<description>Research spezialiesed Helmets for your troops.</description>
+		<baseCost>500</baseCost>
+		<prerequisites>
+			<li>Wraith_Armor_Tier1</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+
+	<!--======== Column 2 - Weapon =========-->
+
+	<ResearchProjectDef ParentName="Wraith_Research">
+		<defName>Wraith_Weapon_Tier1</defName>
+		<label>Wraith Weapons</label>
+		<description>Research the basic weapon for the Wraith troops.</description>
+		<baseCost>500</baseCost>
+		<prerequisites>
+			<li>Gunsmithing</li>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+
+
+
+	<!--======== Column 2 - Buildings =========-->
+
+
+	<ResearchProjectDef ParentName="Wraith_Research">
+		<defName>Dart</defName>
+		<label>Dart</label>
+		<description>Get access to the Wraith starfighter.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="Wraith_Research">
+		<defName>Wraith_Basic</defName>
+		<label>Hive Structures</label>
+		<description>Get access to hive structures.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="Goauld_Research">
+		<defName>Wraith_Generator</defName>
+		<label>Wraith Generator</label>
+		<description>Get access to the Wraith biomass generator.</description>
+		<baseCost>1500</baseCost>			
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>		
+		<researchViewX>2</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>	
+
+
+</Defs>

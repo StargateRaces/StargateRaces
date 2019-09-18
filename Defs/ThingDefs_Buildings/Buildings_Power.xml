@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=============== Naquadria Generator ========-->
+	
+	<ThingDef ParentName="BuildingBase">
+    <defName>NaquadriaFiredGenerator</defName>
+    <label>Naquadria Generator</label>
+    <description>Produces power by consuming naquadria. Must be periodically loaded with naquadria by hand.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Building/NaquadriaFiredGenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-25</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>125</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-5000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.25</fuelConsumptionRate>
+        <fuelCapacity>25.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Naquadria</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(255,202,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>6</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Naquadria_Fired_Generator</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+  </ThingDef>
+
+	<!--=============== Wraith Generator ========-->
+	
+	<ThingDef ParentName="BuildingBase">
+    <defName>WraithGenerator</defName>
+    <label>Meat Fired Generator</label>
+    <description>Produces power by consuming human meat. Must be periodically loaded with cocooned human meat by hand.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Building/WraithGenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-25</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>60</Steel>
+      <Biomass>70</Biomass>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-5000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.25</fuelConsumptionRate>
+        <fuelCapacity>25.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>CocoonedHumanMeat</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(255,202,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>6</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Wraith_Generator</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="GoauldFactionBase">
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="GoauldFactionBase">
+    <defName>GoauldPlayerColony</defName>
+    <label>Goauld Colony</label>
+    <description>Your own community.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Goauld</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+			<li>GoauldChildBackstory</li>
+			<li>GoauldBackstory</li>
+			<li>JaffaBackstory</li>
+			<li>SlaveBackstory</li>
+  	</backstoryCategories>
+    <homeIconPath>World/GoauldBaseIcon</homeIconPath>
+    <expandingIconTexture>World/GoauldBaseIcon</expandingIconTexture>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+      <li>Punk</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+
+  </FactionDef>
+  
+    <FactionDef Parent="GoauldFactionBase">
+    <defName>GoauldPlayerColonyTribal</defName>
+    <label>Goauld Tribal</label>
+    <description>Goauld Tribal Start.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Goauld</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+			<li>GoauldBackstory</li>
+      <li>Civil</li>
+  	</backstoryCategories>
+    <homeIconPath>World/GoauldBaseIcon</homeIconPath>
+    <expandingIconTexture>World/GoauldBaseIcon</expandingIconTexture>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+      <li>Punk</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(0, 0.437, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+
+</Defs>

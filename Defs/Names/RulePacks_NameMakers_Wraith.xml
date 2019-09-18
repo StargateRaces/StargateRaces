@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerPersonWraithM</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[WraithfirstM] [Wraithlast]</li>
+        <li>name->[badasstwi] [WraithfirstM]</li>
+        <li>name->[WraithfirstM] '[badasstwi]' [Wraithlast]</li>
+        <li>name->[WraithfirstM] [badasstwi]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>WraithfirstM</keyword>
+          <path>Wraith_Names/WraithM</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Wraithlast</keyword>
+          <path>Wraith_Names/Wraithlast</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>badasstwi</keyword>
+          <path>Wraith_Names/Concepts_Wraith</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonWraithF</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[WraithfirstF] [Wraithlast]</li>
+        <li>name->[badasstwi] [WraithfirstF]</li>
+        <li>name->[WraithfirstF] '[badasstwi]' [Wraithlast]</li>
+        <li>name->[WraithfirstF] [badasstwi]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>WraithfirstF</keyword>
+          <path>Wraith_Names/WraithF</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Wraithlast</keyword>
+          <path>Wraith_Names/Wraithlast</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>badasstwi</keyword>
+          <path>Wraith_Names/Concepts_Wraith</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ================ Goauld =================== -->
+  <ThingDef ParentName="BuildingBase" Name="Goauld_Wall">
+    <defName>Goauld_Wall</defName>
+    <label>Goauld wall</label>
+    <description>A nice wall.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/Goauld_Wall</texPath>
+				<color>(108,78,55)</color>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Building/Goauld_Wall_Icon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <costStuffCount>0</costStuffCount>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <stuffCategories/>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationHotKey>Misc3</designationHotKey>
+    <costList>
+      <Steel>5</Steel>
+      <Naquadah>5</Naquadah>
+    </costList>
+    <researchPrerequisites><li>Goauld_Basic</li></researchPrerequisites>
+  </ThingDef>
+
+  <!-- ================ Wraith =================== -->
+  <ThingDef ParentName="BuildingBase" Name="Hive_Wall">
+    <defName>Hive_Wall</defName>
+    <label>Hive wall</label>
+    <description>A nice wall.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/Hive_Wall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Building/Hive_Wall_Icon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <costStuffCount>0</costStuffCount>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <stuffCategories/>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationHotKey>Misc3</designationHotKey>
+    <costList>
+      <Steel>5</Steel>
+      <Biomass>2</Biomass>
+    </costList>
+    <researchPrerequisites><li>Wraith_Basic</li></researchPrerequisites>
+  </ThingDef>
+
+</Defs>

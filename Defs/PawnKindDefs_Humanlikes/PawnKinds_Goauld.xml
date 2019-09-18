@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================ Goaluld Base ========================== -->
+
+  <PawnKindDef Name="GoauldBase" Abstract="True">
+    <defaultFactionType>GoauldEmpire</defaultFactionType>
+    <race>Alien_Goauld</race>
+    <backstoryCategories>
+      <li>GoauldChildBackstory</li>
+      <li>JaffaBackstory</li>
+      <li>SlaveBackstory</li>
+    </backstoryCategories>
+    <chemicalAddictionChance>0.035</chemicalAddictionChance>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+  </PawnKindDef>
+
+  <!-- ====== Goaluld Civilian Base ========= -->
+
+  <PawnKindDef Name="GoauldCivBase" ParentName="GoauldBase" Abstract="True">
+    <combatPower>25</combatPower>
+    <race>Alien_Goauld</race>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2800</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>270</min>
+      <max>1000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>JaffaGun</li>
+      <li>JaffaMelee</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>200</min>
+      <max>300</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+    <techHediffsChance>0.51</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.75</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>90</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>25</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li>
+          <choiceChance>10</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>700</min>
+            <max>1000</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <!-- ====== Goa'uld Civilians classes =================== -->
+
+  <PawnKindDef ParentName="GoauldCivBase">
+    <defName>Colonist</defName>
+    <label>colonist</label>
+    <race>Human</race>
+    <apparelTags>
+      <li>Tribal</li>
+      <li>Neolithic</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GoauldCivBase">
+    <defName>Goauld_Leader</defName>
+    <label>Lord</label>
+    <labelPlural>Lords</labelPlural>
+    <factionLeader>true</factionLeader>
+    <minGenerationAge>39</minGenerationAge>
+    <maxGenerationAge>100</maxGenerationAge>
+    <isFighter>true</isFighter>
+    <combatPower>90</combatPower>
+    <apparelTags>
+      <li>Goauld</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Goauld_Armor</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GoauldCivBase">
+    <defName>Trader</defName>
+    <label>trader</label>
+    <race>Human</race>
+    <trader>true</trader>
+    <apparelTags>
+      <li>Tribal</li>
+      <li>Neolithic</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GoauldCivBase">
+    <defName>Slave</defName>
+    <label>slave</label>
+    <race>Human</race>
+    <apparelTags>
+      <li>Tribal</li>
+      <li>Neolithic</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!-- ============================ Goa'uld Military ========================== -->
+
+  <PawnKindDef Name="GoauldMilBase" ParentName="GoauldBase" Abstract="True">
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <isFighter>true</isFighter>
+    <race>Alien_Jaffa</race>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <minGenerationAge>19</minGenerationAge>
+    <maxGenerationAge>50</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <!-- === Goa'uld Military classes === -->
+
+  <PawnKindDef ParentName="GoauldMilBase">
+    <defName>Jaffa_Warrior</defName>
+    <label>Jaffa warrior</label>
+    <combatPower>90</combatPower>
+    <minGenerationAge>19</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>1500</min>
+      <max>3000</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>Jaffa</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Jaffa_Armor</li>
+    </apparelRequired>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>JaffaGun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GoauldMilBase">
+    <defName>Jaffa_Melee</defName>
+    <label>Jaffa warrior</label>
+    <combatPower>75</combatPower>
+    <minGenerationAge>19</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>1500</min>
+      <max>3000</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>Jaffa</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Jaffa_Armor</li>
+    </apparelRequired>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>JaffaMelee</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GoauldMilBase">
+    <defName>Jaffa_Grenadier</defName>
+    <label>Jaffa warrior</label>
+    <combatPower>65</combatPower>
+    <minGenerationAge>19</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>1500</min>
+      <max>3000</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>Jaffa</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Jaffa_Armor</li>
+    </apparelRequired>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>JaffaGrenade</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <!-- Kull Warrior -->
+
+  <PawnKindDef ParentName="GoauldMilBase">
+    <defName>Kull_Warrior</defName>
+    <label>Kull warrior</label>
+    <combatPower>220</combatPower>
+    <minGenerationAge>26</minGenerationAge>
+    <gearHealthRange>
+      <min>0.8</min>
+      <max>3.5</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>2500</min>
+      <max>4200</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>Kull</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>1600</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>KullGun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>2000</min>
+      <max>3000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>1</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <combatEnhancingDrugsChance>0.1</combatEnhancingDrugsChance>
+    <techHediffsChance>0.80</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>120</min>
+            <max>480</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+</Defs>

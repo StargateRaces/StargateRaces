@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Goa'uld Weapons -->
+
+	<ThingDef Name="BaseGunJaffa" ParentName="BaseMakeableGun" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<workAmount>500</workAmount>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>GoauldCraftingTable</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<drawSize>1</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<!-- Ma'Tok-->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_JaffaStaff</defName>
+		<label>staff shot</label>
+		<description>bullet</description>
+		<graphicData>
+			<texPath>Things/Projectile/InfernoCannonShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="Gun_JaffaStaff" ParentName="BaseGunJaffa">
+		<defName>Gun_JaffaStaff_blue</defName>
+		<label>Ma'Tok Staff</label>
+		<description>The Ma'Tok staff is the primary weapon of Jaffa warriors.</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>Goauld_Weapon_Tier1</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Naquadah>5</Naquadah>
+		</costList>
+		<graphicData>
+			<texPath>Weapons/staff_blue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<statBases>
+			<MarketValue>750</MarketValue>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>3.4</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.87</AccuracyShort>
+			<AccuracyMedium>0.77</AccuracyMedium>
+			<AccuracyLong>0.64</AccuracyLong>
+			<RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_JaffaStaff</defaultProjectile>
+				<warmupTime>0.9</warmupTime>
+				<range>30</range>
+				<minRange>0.5</minRange>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>Staff_Fire</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>haft</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+		</tools>
+		<weaponTags>
+			<li>JaffaGun</li>
+		</weaponTags>
+	</ThingDef>
+
+	<!-- Zat'nik'tel-->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_Zat</defName>
+		<label>zat'nik'tel shot</label>
+		<description>bullet</description>
+		<graphicData>
+			<texPath>Weapons/Projectile/bullet_zat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>40</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="Gun_JaffaZat" ParentName="BaseGunJaffa">
+		<defName>Gun_Zat</defName>
+		<label>Zat'nik'tel</label>
+		<description>This is a Goauld Zat'nik'tel. A weapon using a different form of energy, less powerful than that of a staff weapon. Less destructive, but still quite deadly.  One shot can incapacitate a victim.</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>Goauld_Weapon_Tier1</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Naquadah>2</Naquadah>
+		</costList>
+		<graphicData>
+			<texPath>Weapons/zat2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Zat</soundInteract>
+		<statBases>
+			<MarketValue>750</MarketValue>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>1.2</Mass>
+			<AccuracyTouch>0.91</AccuracyTouch>
+			<AccuracyShort>0.71</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.32</AccuracyLong>
+			<RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Zat</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>23</range>
+				<minRange>0.5</minRange>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>ZatGun_Fire</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+		</tools>
+		<weaponTags>
+			<li>JaffaGun</li>
+		</weaponTags>
+	</ThingDef>
+
+	<!-- Kull-->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_KullGun</defName>
+		<label>Kull shot</label>
+		<description>bullet</description>
+		<graphicData>
+			<texPath>Things/Projectile/InfernoCannonShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="KullGun" ParentName="BaseGunJaffa">
+		<defName>KullGun</defName>
+		<label>Kull Weapon</label>
+		<description>The wrist gun is the primary weapon of kull warriors.</description>
+		<techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>Goauld_Weapon_Tier2</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Plasteel>50</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Naquadah>25</Naquadah>
+		</costList>
+		<graphicData>
+			<texPath>Weapons/KullGun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<statBases>
+			<MarketValue>1400</MarketValue>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>3.4</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.24</AccuracyShort>
+			<AccuracyMedium>0.24</AccuracyMedium>
+			<AccuracyLong>0.18</AccuracyLong>
+			<RangedWeapon_Cooldown>2.26</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_KullGun</defaultProjectile>
+				<warmupTime>0.9</warmupTime>
+				<range>24</range>
+				<minRange>0.5</minRange>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>Kull_Fire</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>4</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>haft</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+		</tools>
+		<weaponTags>
+			<li>KullGun</li>
+		</weaponTags>
+	</ThingDef>
+
+	<!-- Wraith Stuff -->
+
+	<ThingDef Name="BaseGunWraith" ParentName="BaseMakeableGun" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>WraithCraftingTable</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>WraithGun</li>
+		</weaponTags>
+	</ThingDef>
+
+	<!-- Wraith Spear-->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>bullet_spear</defName>
+		<label>Spear shot</label>
+		<description>bullet</description>
+		<graphicData>
+			<texPath>Weapons/Projectile/bullet_spear</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>40</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="Gun_WraithSpear" ParentName="BaseGunWraith">
+		<defName>Wraith_Spear</defName>
+		<label>Wraith Spear</label>
+		<description>This is a wraith spear. It is used to stun humans. After they are captured they can be turned into food.</description>
+		<techLevel>Industrial</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>Wraith_Weapon_Tier1</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Biomass>50</Biomass>
+		</costList>
+		<graphicData>
+			<texPath>Weapons/Wraith_Spear</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<statBases>
+			<MarketValue>750</MarketValue>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>1.2</Mass>
+			<AccuracyTouch>0.91</AccuracyTouch>
+			<AccuracyShort>0.71</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.32</AccuracyLong>
+			<RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>bullet_spear</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>23</range>
+				<minRange>0.5</minRange>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+</Defs>

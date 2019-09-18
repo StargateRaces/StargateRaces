@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="CMeatOrganicProductBase" ParentName="ResourceBase">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>5</DeteriorationRate>
+      <Mass>0.20</Mass>
+    </statBases>
+    <tickerType>Rare</tickerType>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="CMeatFoodRawBase" ParentName="OrganicProductBase">
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>RawBad</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <statBases>
+      <Nutrition>0.20</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="CMeatFoodRawBase">
+    <defName>CocoonedHumanMeat</defName>
+    <label>Cocooned Human Meat</label>
+    <description>Raw meat from cocooned humans.</description>
+    <graphicData>
+      <texPath>Item/Meat/CMeatHuman</texPath>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.20</Nutrition>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>3</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
