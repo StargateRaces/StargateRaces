@@ -8,7 +8,7 @@
 	<description>This mod adds the Race of the Wraith and the Goa'uld from the Series Stargate. This mod was heavily inspired on the RimGate - Jaffa, Kree! mod and is increasing now. This one adds the Jaffa with their Armor, the Staff weapon and the Stungun but it wasn't possilbe to build them yourself. Therefore I have rewritten the Mod and add some other stuff myself, as well as I retexutred and rewrote some very interesting mods to add more flavour.
 It is work in progress as it is super time consuming as it is my first mod and I should focus a bit more oin my PhD thesis - Feel free to join and help me, especially if you know C# modding ( I have no clue, I tried and it is more difficult for me)
 
-The mod contains (v1.1):
+The mod contains (v1.2):
 Two new Race inculding the suitable scenario:
 Goa'uld:
 - The one Race is called Goa'uld, in order to choose if your pawns are Goa'uld, Jaffa or slaves you need to choose their Backstories. I recommend to play with 1 Goa'uld, 2 Jaffa and 3 Slaves.
@@ -43,6 +43,8 @@ P.s. I couldn't fix that the pawn in the sarcophagus doesn't show its stupid hea
 
 v.1.1
 Due to some problems I have created a Goa'uld and a Wraith Crafting Table where their stuff can be crafted. So no data are overrided of the original files. THis should help to work with different mods too. Unfortunetla I couldn't fix any head issues as the files are all properly labelled. It should work, but I am not a good coder nor artist (as you might realise^^).
+v.1.2
+Thanks to EbonJaeger the game is now balanced and a lot of string errors are fixed. Finally I found the reason why the benches didn't work and it is fixed now too.
 
 </description>
 </ModMetaData>

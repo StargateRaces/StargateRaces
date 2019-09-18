@@ -18,4 +18,40 @@
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
 
+<!-- GoauldCraftingTable -->
+  <WorkGiverDef>
+    <defName>GoauldCraftingTable_DoBillsCraftingStation</defName>
+    <label>Craft items at station</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>GoauldCraftingTable</li>
+    </fixedBillGiverDefs>
+    <verb>Craft</verb>
+    <gerund>Crafting at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+<!-- WraithCraftingTable -->
+  <WorkGiverDef>
+    <defName>WraithCraftingTable_DoBillsCraftingStation</defName>
+    <label>Craft items at station</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>WraithCraftingTable</li>
+    </fixedBillGiverDefs>
+    <verb>Craft</verb>
+    <gerund>Crafting at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
 </Defs>
