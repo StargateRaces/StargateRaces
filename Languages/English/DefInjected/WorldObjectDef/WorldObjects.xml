@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-
-
-  <TravelingHelicopters.label>Telt'tak</TravelingHelicopters.label>
-  <TravelingHelicopters.description>Flying Telt'tak</TravelingHelicopters.description>
-
-
+  <TravelingSRTS.label>Flying ships</TravelingSRTS.label>
+  <TravelingSRTS.description>Ships in flight</TravelingSRTS.description>
 
 </LanguageData>

@@ -4,48 +4,50 @@
 
   <!--==== Tel'tak============-->
 
-
-
   <ThingDef ParentName="BuildingBase">
-    <defName>Building_Helicopter</defName>
+    <defName>Teltak</defName>
     <label>Tel'tak</label>
     <description>Tel'taks are small transport ships capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
     <graphicData>
-      <texPath>Tel'tak/Tel'tak</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(9,9)</drawSize>
+      <texPath>Ships/Teltak</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(12,12)</drawSize>
+      <shadowData>
+        <volume>(0.1, 0.1, 0.1)</volume>
+      </shadowData>
     </graphicData>
-    <size>(4,5)</size>
-    <rotatable>false</rotatable>
+    <size>(7,8)</size>
     <tickerType>Normal</tickerType>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <passability>PassThroughOnly</passability>
-    <castEdgeShadows>false</castEdgeShadows>
-    <fillPercent>0.5</fillPercent>
-    <designationCategory>Misc</designationCategory>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.8</fillPercent>
+    <designationCategory>Ship</designationCategory>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <statBases>
-      <MaxHitPoints>850</MaxHitPoints>
-      <WorkToBuild>1600</WorkToBuild>
+      <MaxHitPoints>1400</MaxHitPoints>
+      <WorkToBuild>24000</WorkToBuild>
       <Flammability>0.5</Flammability>
       <Mass>114514</Mass>
     </statBases>
     <costList>
-      <Plasteel>100</Plasteel>
-      <Steel>100</Steel>
-      <ComponentIndustrial>8</ComponentIndustrial>
+      <Plasteel>250</Plasteel>
+      <Steel>1500</Steel>
+      <ComponentIndustrial>16</ComponentIndustrial>
+      <ComponentSpacer>5</ComponentSpacer>
       <Naquadah>100</Naquadah>
     </costList>
     <comps>
       <li Class="CompProperties_Transporter">
         <restEffectiveness>0.8</restEffectiveness>
-        <massCapacity>3000</massCapacity>
+        <massCapacity>8500</massCapacity>
       </li>
-      <li Class="Helicopter.CompProperties_LaunchableHelicopter" />
+      <li Class="SRTS.CompProperties_LaunchableSRTS" />
       <li Class="CompProperties_Refuelable">
-        <fuelCapacity>350.0</fuelCapacity>
+        <fuelCapacity>3000.0</fuelCapacity>
+        <fuelConsumptionRate>0.8</fuelConsumptionRate>
         <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+        <initialConfigurableTargetFuelLevel>3000</initialConfigurableTargetFuelLevel>
         <fuelFilter>
           <thingDefs>
             <li>Chemfuel</li>
@@ -67,9 +69,79 @@
     <researchPrerequisites>
       <li>Tel-tak</li>
     </researchPrerequisites>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <uiIconScale>0.65</uiIconScale>
   </ThingDef>
 
+  <!-- Wraith Dart -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>WraithDart</defName>
+    <label>Wraith Dart</label>
+    <description>Wraith Darts are single-pilot ships used by the Wraith both for combat missions or culling human planets.</description>
+    <graphicData>
+      <texPath>Ships/Dart</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(9,9)</drawSize>
+      <shadowData>
+        <volume>(0.1, 0.1, 0.1)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(3,5)</size>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationCategory>Ship</designationCategory>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToBuild>24000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Mass>114514</Mass>
+    </statBases>
+    <costList>
+      <Plasteel>250</Plasteel>
+      <Steel>100</Steel>
+      <ComponentIndustrial>16</ComponentIndustrial>
+      <ComponentSpacer>5</ComponentSpacer>
+      <Biomass>500</Biomass>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>4400</massCapacity>
+      </li>
+      <li Class="SRTS.CompProperties_LaunchableSRTS" />
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>1500.0</fuelCapacity>
+        <fuelConsumptionRate>0.8</fuelConsumptionRate>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>1500</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_TransporterContents</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Dart</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiIconScale>0.65</uiIconScale>
+  </ThingDef>
 
 </Defs>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Tel'tak -->
+
+    <ThingDef ParentName="SkyfallerBase">
+        <defName>Teltak_Incoming</defName>
+        <label>Tel'tak incoming</label>
+        <thingClass>DropPodIncoming</thingClass>
+        <graphicData>
+            <texPath>Ships/Teltak</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutFlying</shaderType>
+            <drawSize>(12,12)</drawSize>
+        </graphicData>
+        <skyfaller>
+            <movementType>Decelerate</movementType>
+            <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+            <shadowSize>(6,6)</shadowSize>
+            <anticipationSound>Sound_Incoming</anticipationSound>
+            <anticipationSoundTicks>100</anticipationSoundTicks>
+            <motesPerCell>0</motesPerCell>
+        </skyfaller>
+    </ThingDef>
+
+    <ThingDef ParentName="SkyfallerBase">
+        <defName>Teltak_Leaving</defName>
+        <label>Tel'tak leaving</label>
+        <thingClass>SRTS.SRTSLeaving</thingClass>
+        <graphicData>
+            <texPath>Ships/Teltak</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutFlying</shaderType>
+            <drawSize>(12,12)</drawSize>
+        </graphicData>
+        <skyfaller>
+            <movementType>Decelerate</movementType>
+            <reversed>true</reversed>
+            <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+            <shadowSize>(6,6)</shadowSize>
+            <anticipationSound>Sound_Launch</anticipationSound>
+            <anticipationSoundTicks>-10</anticipationSoundTicks>
+            <ticksToImpactRange>
+                <min>-40</min>
+                <max>-15</max>
+            </ticksToImpactRange>
+        </skyfaller>
+    </ThingDef>
+
+    <ThingDef>
+        <defName>Teltak_Active</defName>
+        <label>Tel'tak active</label>
+        <category>Item</category>
+        <thingClass>ActiveDropPod</thingClass>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Ships/Teltak</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(12,12)</drawSize>
+            <shadowData>
+                <volume>(0.8, 0.6, 0.8)</volume>
+            </shadowData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <blockWind>true</blockWind>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MaxHitPoints>4000</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <selectable>true</selectable>
+    </ThingDef>
+
+    <!-- Wraith Dart -->
+
+    <ThingDef ParentName="SkyfallerBase">
+        <defName>WraithDart_Incoming</defName>
+        <label>Wraith Dart incoming</label>
+        <thingClass>DropPodIncoming</thingClass>
+        <graphicData>
+            <texPath>Ships/Dart</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutFlying</shaderType>
+            <drawSize>9</drawSize>
+        </graphicData>
+        <skyfaller>
+            <movementType>Decelerate</movementType>
+            <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+            <shadowSize>(6,6)</shadowSize>
+            <anticipationSound>Sound_Incoming</anticipationSound>
+            <anticipationSoundTicks>100</anticipationSoundTicks>
+            <motesPerCell>0</motesPerCell>
+        </skyfaller>
+    </ThingDef>
+
+    <ThingDef ParentName="SkyfallerBase">
+        <defName>WraithDart_Leaving</defName>
+        <label>Wraith Dart leaving</label>
+        <thingClass>SRTS.SRTSLeaving</thingClass>
+        <graphicData>
+            <texPath>Ships/Dart</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutFlying</shaderType>
+            <drawSize>9</drawSize>
+        </graphicData>
+        <skyfaller>
+            <movementType>Decelerate</movementType>
+            <reversed>true</reversed>
+            <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+            <shadowSize>(6,6)</shadowSize>
+            <anticipationSound>Sound_Launch</anticipationSound>
+            <anticipationSoundTicks>-10</anticipationSoundTicks>
+            <ticksToImpactRange>
+                <min>-40</min>
+                <max>-15</max>
+            </ticksToImpactRange>
+        </skyfaller>
+    </ThingDef>
+
+    <ThingDef>
+        <defName>WraithDart_Active</defName>
+        <label>Wraith Dart active</label>
+        <category>Item</category>
+        <thingClass>ActiveDropPod</thingClass>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Ships/Dart</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>9</drawSize>
+            <shadowData>
+                <volume>(0.8, 0.6, 0.8)</volume>
+            </shadowData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <blockWind>true</blockWind>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MaxHitPoints>1250</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <selectable>true</selectable>
+    </ThingDef>
+
+</Defs>

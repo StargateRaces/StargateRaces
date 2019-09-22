@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  
+  <Teltak.label>Tel'tak</Teltak.label>
+  <Teltak.description>Tel'taks are small transportships capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</Teltak.description>
+  <Teltak_Blueprint.label>Tel'taks (Blueprint)</Teltak_Blueprint.label>
+  <Teltak_Frame.label>Tel'tak (Building)</Teltak_Frame.label>
+  <Teltak_Frame.description>Tel'taks are small transportships capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</Teltak.description>
 
-  <Building_Helicopter.label>Telt'tak</Building_Helicopter.label>
-  <Building_Helicopter.description>Telt'taks are small transportships capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</Building_Helicopter.description>
-  <Building_Helicopter_Blueprint.label>Telt'taks(Blueprint)</Building_Helicopter_Blueprint.label>
-  <Building_Helicopter_Frame.label>Telt'tak(Building)</Building_Helicopter_Frame.label>
-  <Building_Helicopter_Frame.description>Telt'taks are small transportships capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</Building_Helicopter_Frame.description>
-
+  <WraithDart.label>Wraith Dart</WraithDart.label>
+  <WraithDart.description>Wraith Darts are single-pilot ships used by the Wraith both for combat missions or culling human planets.</WraithDart.description>
+  <WraithDart_Blueprint.label>Wraith Dart (Blueprint)</WraithDart_Blueprint.label>
+  <WraithDart_Frame.label>Wraith Dart (Building)</WraithDart_Frame.label>
+  <WraithDart_Frame.description>Wraith Darts are single-pilot ships used by the Wraith both for combat missions or culling human planets.</WraithDart_Frame.description>
 
 </LanguageData>
