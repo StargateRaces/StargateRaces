@@ -7,6 +7,9 @@
             <alienrefugeekinds>
                 <li>
                     <kindDefs>
+                        <li>Jaffa_Colonist</li>
+                        <li>Jaffa_Grenadier</li>
+                        <li>Jaffa_Melee</li>
                         <li>Jaffa_Warrior</li>
                     </kindDefs>
                     <chance>50.0</chance>
@@ -17,16 +20,14 @@
                     <pawnKindEntries>
                         <li>
                             <kindDefs>
-                                <li>Colonist</li>
-                                <li>Jaffa_Grenadier</li>
-                                <li>Jaffa_Melee</li>
-                                <li>Jaffa_Warrior</li>
+                                <li>Jaffa_Colonist</li>
                             </kindDefs>
                             <chance>10.0</chance>
                         </li>
                     </pawnKindEntries>
                     <factionDefs>
                         <li>GoauldPlayerColony</li>
+                        <li>JaffaPlayerColony</li>
                     </factionDefs>
                 </li>
             </startingColonists>
@@ -35,7 +36,7 @@
                     <pawnKindEntries>
                         <li>
                             <kindDefs>
-                                <li>Colonist</li>
+                                <li>Jaffa_Colonist</li>
                                 <li>Jaffa_Grenadier</li>
                                 <li>Jaffa_Melee</li>
                                 <li>Jaffa_Warrior</li>
@@ -45,6 +46,7 @@
                     </pawnKindEntries>
                     <factionDefs>
                         <li>GoauldPlayerColony</li>
+                        <li>JaffaPlayerColony</li>
                     </factionDefs>
                 </li>
             </alienwandererkinds>

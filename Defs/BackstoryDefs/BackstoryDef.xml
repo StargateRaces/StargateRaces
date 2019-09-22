@@ -113,53 +113,10 @@
         <amount>6</amount>
       </li>
       <li>
-        <defName>Mining</defName>
-        <amount>-12</amount>
-      </li>
-      <li>
-        <defName>Cooking</defName>
-        <amount>0</amount>
-      </li>
-      <li>
-        <defName>Plants</defName>
-        <amount>-12</amount>
-      </li>
-      <li>
-        <defName>Animals</defName>
-        <amount>4</amount>
-      </li>
-      <li>
-        <defName>Crafting</defName>
-        <amount>4</amount>
-      </li>
-      <li>
-        <defName>Artistic</defName>
-        <amount>4</amount>
-      </li>
-      <li>
         <defName>Medicine</defName>
-        <amount>0</amount>
-      </li>
-      <li>
-        <defName>Social</defName>
-        <amount>4</amount>
-      </li>
-      <li>
-        <defName>Intellectual</defName>
-        <amount>0</amount>
+        <amount>2</amount>
       </li>
     </skillGains>
-    <forcedTraits>
-      <li>
-        <defName>Beauty</defName>
-        <degree>2</degree>
-        <chance>20</chance>
-      </li>
-      <li>
-        <defName>Greedy</defName>
-        <chance>0</chance>
-      </li>
-    </forcedTraits>
     <workDisables>
     </workDisables>
   </AlienRace.BackstoryDef>
@@ -180,11 +137,11 @@
     <skillGains>
       <li>
         <defName>Melee</defName>
-        <amount>-12</amount>
+        <amount>0</amount>
       </li>
       <li>
         <defName>Shooting</defName>
-        <amount>-12</amount>
+        <amount>0</amount>
       </li>
       <li>
         <defName>Mining</defName>
@@ -208,7 +165,7 @@
       </li>
       <li>
         <defName>Crafting</defName>
-        <amount>0</amount>
+        <amount>2</amount>
       </li>
       <li>
         <defName>Artistic</defName>
@@ -216,7 +173,7 @@
       </li>
       <li>
         <defName>Medicine</defName>
-        <amount>-12</amount>
+        <amount>0</amount>
       </li>
       <li>
         <defName>Social</defName>
@@ -224,19 +181,9 @@
       </li>
       <li>
         <defName>Intellectual</defName>
-        <amount>-12</amount>
+        <amount>-2</amount>
       </li>
     </skillGains>
-    <forcedTraits>
-      <li>
-        <defName>Ascetic</defName>
-        <chance>100</chance>
-      </li>
-      <li>
-        <defName>Jealous</defName>
-        <chance>0</chance>
-      </li>
-    </forcedTraits>
     <workDisables>
     </workDisables>
   </AlienRace.BackstoryDef>
