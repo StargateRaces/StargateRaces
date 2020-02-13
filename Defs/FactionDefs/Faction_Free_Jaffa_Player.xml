@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="JaffaFactionBase">
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+
+  <FactionDef Parent="JaffaFactionBase">
+    <defName>JaffaPlayerColony</defName>
+    <label>Free Jaffa Colony</label>
+    <description>Your own community.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Jaffa_Colonist</basicMemberKind>
+    <pawnsPlural>Jaffa</pawnsPlural>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+      <li>JaffaBackstory</li>
+      <li>SlaveBackstory</li>
+      <li>Civil</li>
+    </backstoryCategories>
+    <homeIconPath>World/GoauldBaseIcon</homeIconPath>
+    <expandingIconTexture>World/GoauldBaseIcon</expandingIconTexture>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+      <li>Punk</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+
+  </FactionDef>
+
+  <FactionDef Parent="JaffaFactionBase">
+    <defName>JaffaPlayerColonyTribal</defName>
+    <label>Free Jaffa Tribal</label>
+    <description>Jaffa Tribal Start.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Jaffa_Colonist</basicMemberKind>
+    <pawnsPlural>Jaffa</pawnsPlural>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+      <li>JaffaBackstory</li>
+      <li>SlaveBackstory</li>
+      <li>Civil</li>
+    </backstoryCategories>
+    <homeIconPath>World/GoauldBaseIcon</homeIconPath>
+    <expandingIconTexture>World/GoauldBaseIcon</expandingIconTexture>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+      <li>Punk</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(0, 0.437, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+
+</Defs>

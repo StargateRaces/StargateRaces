@@ -85,6 +85,7 @@
 
   <PawnKindDef ParentName="GoauldCivBase">
     <defName>Goauld_Leader</defName>
+    <race>Alien_Goauld</race>
     <label>Lord</label>
     <labelPlural>Lords</labelPlural>
     <factionLeader>true</factionLeader>
